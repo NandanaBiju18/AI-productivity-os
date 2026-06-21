@@ -34,6 +34,7 @@ function Dashboard({ refresh, darkMode })  {
         (completed / total) * 100
       )
     : 0;
+    
   return (
     <div
       style={{
