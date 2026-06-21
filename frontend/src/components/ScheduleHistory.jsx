@@ -10,8 +10,7 @@ function ScheduleHistory() {
 
   const loadHistory = async () => {
     try {
-      const res = await API.get(
-        "/schedule-history"
+      const res = await (API.get("/tasks/schedule-history")
       );
 
       setHistory(res.data);

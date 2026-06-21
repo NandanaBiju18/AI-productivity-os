@@ -9,7 +9,7 @@ function Dashboard({ refresh, darkMode })  {
 }, [refresh]);
 
   const loadTasks = async () => {
-    const res = await API.get("/");
+    const res = await API.get("/tasks");
     setTasks(res.data);
   };
 
@@ -34,7 +34,7 @@ function Dashboard({ refresh, darkMode })  {
         (completed / total) * 100
       )
     : 0;
-    
+
   return (
     <div
       style={{
