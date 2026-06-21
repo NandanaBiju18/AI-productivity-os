@@ -42,6 +42,11 @@ function TaskList({ refresh, darkMode }) {
       color: darkMode ? "white" : "black",
       padding: "20px",
       borderRadius: "12px",
+      marginBottom: "12px",
+  boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+
+  width: "100%",
+  boxSizing: "border-box",
     }}
   >
           <h4>Total</h4>
@@ -102,6 +107,8 @@ color: darkMode ? "white" : "black",
       filter === "All" ||
       task.category === filter
   )
+
+  
   .map((task) => (
         <div
           key={task._id}

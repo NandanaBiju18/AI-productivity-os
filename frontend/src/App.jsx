@@ -42,7 +42,10 @@ function App() {
         minHeight: "100vh",
         background: darkMode ? "#111827" : "#f3f4f6",
         color: darkMode ? "white" : "black",
-        padding: "30px",
+        padding:
+  window.innerWidth < 768
+    ? "15px"
+    : "30px",
       }}
     >
       {/* Header */}
@@ -119,7 +122,10 @@ function App() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
+          gridTemplateColumns:
+  window.innerWidth < 768
+    ? "1fr"
+    : "1fr 1fr",
           gap: "20px",
           marginTop: "25px",
           marginBottom: "25px",

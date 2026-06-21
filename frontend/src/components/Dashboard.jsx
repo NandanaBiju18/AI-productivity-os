@@ -28,12 +28,20 @@ function Dashboard({ refresh, darkMode })  {
         )
       : 0;
 
+    const productivityScore =
+  total > 0
+    ? Math.round(
+        (completed / total) * 100
+      )
+    : 0;
   return (
     <div
       style={{
         display: "grid",
         gridTemplateColumns:
-          "repeat(4,1fr)",
+  window.innerWidth < 768
+    ? "1fr 1fr"
+    : "repeat(4,1fr)",
         gap: "15px",
         marginBottom: "25px",
       }}
@@ -61,6 +69,11 @@ function Dashboard({ refresh, darkMode })  {
         value={`${completionRate}%`}
         darkMode={darkMode}
       />
+
+      <Card
+  title="🚀 Productivity Score"
+  value={`${productivityScore}/100`}
+/>
     </div>
   );
 }
