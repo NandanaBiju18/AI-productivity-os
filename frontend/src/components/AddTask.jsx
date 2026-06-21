@@ -13,7 +13,7 @@ function AddTask({ setRefresh }) {
 
   const submit = async () => {
     try {
-      await API.post("/add", form);
+      await API.post("/tasks/add", form);
 
       setForm({
         name: "",
